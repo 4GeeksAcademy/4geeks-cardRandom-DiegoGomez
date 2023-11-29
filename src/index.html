@@ -14,19 +14,44 @@
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
   <body>
-    <div class="container bg-success p-5">
+    <div class="container bg-success p-5 mt-5 border border-0 rounded">
       <div class="row h-100 justify-content-center align-items-center">
         <div class="col-md-6">
           <h1 class="text-white fw-bold mb-3 text-center">
             Random card Diego Gomez
           </h1>
-          <div class="card">
-            <!-- Icono normal -->
-              <div id="icon"></div>
+          <di
+              class="row d-flex justify-content-center align-items-center flex-column"
+            >
+            <div
+            class="card position-relative border border-2 border-dark"
+            style="width: 400px; height: 550px;"
+          >
+              <!-- Icono normal -->
+              <div
+                class="icono position-absolute top-0 start-0"
+                id="icono"
+              ></div>
               <!-- Texto -->
-              <div id="content"></div>
+              <div
+                id="carta"
+                class="fs-1 fw-bold position-absolute top-50 start-50"
+              ></div>
               <!-- Icono invertido con clases de bootstrap -->
-              <div id="reverseIcon"></div>
+              <div
+                class="icono position-absolute bottom-0 end-0 icon-bottom"
+                id="icono"
+              ></div>
+            </div>
+            <!-- Botón -->
+            <div class="row d-flex justify-content-center align-items-center">
+              <button
+              type="button"
+              class="btn btn-danger mt-5 border border-2 border-dark fs-4 fw-bold text-dark w-50"
+              id="ejecutar"
+              >
+              Cambiar
+            </button>
             </div>
           </div>
         </div>

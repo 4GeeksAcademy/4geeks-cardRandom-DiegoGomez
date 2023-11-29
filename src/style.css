@@ -1,4 +1,12 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
-.card-body {
-  min-height: 800px;
+.icon-bottom {
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+}
+
+body {
+  background-color: rgb(178, 190, 190);
 }

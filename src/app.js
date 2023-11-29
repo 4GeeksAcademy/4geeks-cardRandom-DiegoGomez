@@ -17,28 +17,47 @@ window.onload = function() {
                       </svg>';
 
   // Array con las variables
-  var iconsArray = [corazon, diamante, pica];
+  var iconos = [corazon, diamante, pica];
 
-  //Variable para contenido de carta
+  //Array para contenido de carta
   var carta = [
-    '<h1 class="text-center text-dark">A</h1>',
-    '<h1 class="text-center text-dark">2</h1>',
-    '<h1 class="text-center text-dark">3</h1>',
-    '<h1 class="text-center text-dark">4</h1>',
-    '<h1 class="text-center text-dark">5</h1>',
-    '<h1 class="text-center text-dark">6</h1>',
-    '<h1 class="text-center text-dark">7</h1>',
-    '<h1 class="text-center text-dark">8</h1>',
-    '<h1 class="text-center text-dark">9</h1>',
-    '<h1 class="text-center text-dark">10</h1>',
-    '<h1 class="text-center text-dark">Q</h1>',
-    '<h1 class="text-center text-dark">K</h1>'
+    "A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K"
   ];
 
-  //Randomizar iconos
+  //Creo la variable que servirá para retornar el elemento random de la carta
+  //Añado directamente el querySelector
+  const cartaFinal = document.querySelector("#carta");
+  const icons = document.querySelectorAll(".icono");
+  const boton = document.querySelector("#ejecutar");
 
-  var random1 = Math.floor(Math.random(iconsArray + 1) * iconsArray.length);
-  var random2 = Math.floor(Math.random(carta + 1) * carta.length);
+  //Función para generar card random
+  var randomCard = () => {
+    //Hago que los valores de los arrays devuelvan random
+    var randomiconos = iconos[Math.floor(Math.random() * iconos.length)];
+    var randomCarta = carta[Math.floor(Math.random() * carta.length)];
 
-  console.log(random2);
+    //Utilizo textContent porque el array contiene texto plano
+    cartaFinal.textContent = randomCarta;
+
+    //Utilizo forEach ya que de esta forma puedo iterar la clase de html que asigno a varios divs
+    icons.forEach(icon => {
+      //Utilizo innerHTML porque interpreta el código HTML de las variables del array
+      icon.innerHTML = randomiconos;
+    });
+  };
+
+  // Asocio el evento click con el id ejecutar que tiene el botón en el index
+  boton.addEventListener("click", randomCard);
 };
