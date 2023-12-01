@@ -20,12 +20,31 @@
           <h1 class="text-white fw-bold mb-3 text-center">
             Random card Diego Gomez
           </h1>
+          <!--  Inputs-->
+          <div class="inputs p-5 position-fixed start-0 gap-3">
+            <!--  Ancho-->
+            <label for="widthInput" class="text-white fs-3">Ancho </label>
+            <input type="number" id="widthInput" />
+            <!--  Alto-->
+            <label for="widthInput" class="text-white fs-3">Alto </label>
+            <input type="number" id="heightInput" />
+            <!--  Botón para cambiar tamaño-->
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="changeSize()"
+            >
+              Aplicar cambios
+            </button>
+          </div>
+
           <div
             class="row d-flex justify-content-center align-items-center flex-column"
           >
             <div
               class="card position-relative border border-2 border-dark"
               style="width: 400px; height: 550px;"
+              id="card"
             >
               <!-- Icono normal -->
               <div

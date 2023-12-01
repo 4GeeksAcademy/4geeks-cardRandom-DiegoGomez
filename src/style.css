@@ -10,3 +10,9 @@
 body {
   background-color: rgb(178, 190, 190);
 }
+
+.inputs {
+  margin-left: 350px;
+  display: flex;
+  flex-direction: column;
+}

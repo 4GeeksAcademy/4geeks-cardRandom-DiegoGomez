@@ -67,7 +67,23 @@ window.onload = function() {
   boton.addEventListener("click", randomCard);
 
   //Crear carta random cada 10 segundos con un intervalo de 10 segundos
-  var interval = window.setInterval(function() {
+  window.setInterval(function() {
     randomCard();
   }, 10000);
+
+  //Cambiar width y height
+  window.changeSize = function() {
+    // Recoger el valor que escribe el usuario en el input
+    var widthInput = document.getElementById("widthInput").value;
+    var heightInput = document.getElementById("heightInput").value;
+
+    // Asociar el id del div
+    var card = document.getElementById("card");
+    //Con card.style.accedo a las propiedades de css, de esta forma selecciono el
+    //width para un input y el height para otro. Por ultimo, para que se aplique correctamente,
+    //concateno el texto que se escribe en el input con las letras px, para que el
+    //texto final sea "miWidthpx"
+    card.style.width = widthInput + "px";
+    card.style.height = heightInput + "px";
+  };
 };
