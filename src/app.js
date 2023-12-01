@@ -9,7 +9,7 @@ window.onload = function() {
   //Variable corazón
   var corazon = '<i class="fas fa-heart fa-5x" style="color: #ff0000;"></i>';
   //Variable diamante
-  var diamante = '<i class="fas fa-diamond fa-5x"></i>';
+  var diamante = '<i class="fas fa-diamond fa-5x" style="color: #ff0000;"></i>';
   //Variable pica
   var pica =
     '<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-suit-spade-fill" viewBox="0 0 16 16"> \
