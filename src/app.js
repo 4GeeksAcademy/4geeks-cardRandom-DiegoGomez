@@ -65,4 +65,9 @@ window.onload = function() {
 
   // Asocio el evento click con el id ejecutar que tiene el botón en el index
   boton.addEventListener("click", randomCard);
+
+  //Crear carta random cada 10 segundos con un intervalo de 10 segundos
+  var interval = window.setInterval(function() {
+    randomCard();
+  }, 10000);
 };
